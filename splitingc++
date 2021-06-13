@@ -1,0 +1,32 @@
+#include <iostream>
+#include <windows.h>
+#include <string>
+//////////////INCLUDING
+using namespace std;
+void link(string link){
+size_t pos = link.find("=");
+//Here we get the positon of '=' sign
+string ID = link.substr(pos+1);
+//And here were getting all the id  
+cout<< ID<<endl; 
+} 
+int main(){
+while(true){
+string Link;
+cout <<"Insert link\n";	
+cin>>Link;
+//Error handler script
+size_t  pos = Link.find("=");
+if(pos == 18446744073709551615 or Link.find("youtube.com/watch?v")==18446744073709551615)  {
+cout<<"ERROR\n";
+Sleep(1000);
+system("CLS");
+}else{
+link(Link);
+system("PAUSE");
+system("CLS");
+} 
+}
+
+	
+}
